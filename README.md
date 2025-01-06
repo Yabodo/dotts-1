@@ -1,6 +1,6 @@
-## Technology Stack
+## About Dotts 1
 
-- Nuxt.js - Vue.js Framework
+- Nuxt 2 - Vue.js Framework
 - i18n Internationalization
 - Estonian and English Locales
 - User profiles, management
