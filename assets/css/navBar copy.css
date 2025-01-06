@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(15, 12, 12);
+}
+
+.toggle-container {
+  height: 70px;
+  width: 160px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.toggle-container .toggle {
+  height: 0;
+  width: 160px;
+  border-top: 70px solid #f9d230;
+  border-top-color: #f9d230;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+.toggle-container .toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke: #091a28;
+}
+
+.comb-container {
+  height: 70px;
+  width: 160px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.comb-container .comb {
+  height: 0;
+  width: 160px;
+  border-bottom: 70px solid;
+  border-bottom-color: #f9d230;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+.comb-container .comb:before {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: 70px;
+  height: 0;
+  width: 160px;
+  border-top: 70px solid;
+  border-top-color: #f9d230;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+}
+.comb-container .comb .comb-icon {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke: #091a28;
+}
+.comb-container .comb-1 {
+  position: absolute;
+  left: -79%;
+  top: 5%;
+}
+.comb-container .comb-2 {
+  position: absolute;
+  top: 110%;
+}
+.comb-container .comb-3 {
+  position: absolute;
+  left: 79%;
+  top: 5%;
+}/*# sourceMappingURL=navBar copy.css.map */

@@ -1,0 +1,57 @@
+:root {
+	--vs-highlight: 25, 91, 255;
+	--vs-text: 17, 17, 17;
+	--vs-lowlight: 119, 119, 119;
+	--vs-lowerlight: 142, 142, 142;
+
+    --vs-higherbg: 219, 219, 237;
+    --vs-bg: 237, 241, 241; //Default Background
+    --vs-lowerbg: 238, 238, 238; //Background providing better contrast
+    --vs-lowestbg: 255, 255, 255; //Background providing better contrast
+
+	--vs-red: 242, 19, 93;
+	--vs-blue: 91, 59, 196;
+    --vs-green: 23, 201, 100;
+}
+
+[vs-theme='dark'] {
+	--vs-highlight: 0, 247, 255;
+	--vs-text: 238, 238, 238;
+	--vs-lowlight: 178, 178, 178;
+	--vs-lowerlight: 142, 142, 142;
+
+    --vs-higherbg: 13, 38, 59;
+    --vs-bg: 9, 26, 40; //Default Background
+    --vs-lowerbg: 20, 20, 23; //Background providing better contrast
+    --vs-lowestbg: 0, 0, 0; //Background providing better contrast
+    
+	--vs-red: 242, 19, 93;
+	--vs-blue: 91, 59, 196;
+    --vs-green: 23, 201, 100;
+}
+
+$highlight: rgba(var(--vs-highlight), 1);
+$lowlight: rgba(var(--vs-lowlight), 1);
+$lowerlight: rgba(var(--vs-lowerlight), 1);
+$higherbg: rgba(var(--vs-higherbg), 1);
+$bg: rgba(var(--vs-bg), 1);
+$lowerbg: rgba(var(--vs-lowerbg), 1);
+$lowestbg: rgba(var(--vs-lowestbg), 1);
+$text: rgba(var(--vs-text), 1);
+
+$red: rgba(var(--vs-red), 1);
+$blue: rgba(var(--vs-blue), 1);
+$green: rgba(var(--vs-green), 1);
+
+$dangerbg: rgba(var(--vs-danger), 0.5);
+
+$black: #091a28;
+$gray0: rgb(9, 26, 40);
+$primary: rgb(91, 59, 196);
+$primaryOriginal: rgb(137, 192, 255);
+$success: rgb(23, 201, 100);
+$danger: rgb(242, 19, 93);
+$warning: rgb(255, 130, 0);
+$gray: rgb(36, 33, 69);
+$max: rgb(255, 255, 255);
+$min: rgb(36, 33, 69);

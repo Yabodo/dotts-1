@@ -1,0 +1,180 @@
+//Component in organisms/post.vue
+.post {
+	margin-bottom: 2rem;
+	&.create {
+		margin-bottom: 0;
+		.url:hover {
+			border: 1px $lowerlight solid;
+		}
+		.walls {
+			display: flex;
+			padding: 0 0.5rem;
+			align-items: center;
+			justify-content: space-between;
+			.title {
+				font-size: 0.9rem;
+			}
+		}
+	}
+	.profile {
+		//border-bottom: 1px solid gray;
+		display: flex;
+		.info .names {
+			display: flex;
+		}
+		h4 {
+			font-weight: 500;
+			margin-left: 0.5rem;
+		}
+		p {
+			color: $lowlight;
+			margin-left: 0.5rem;
+		}
+	}
+
+	.message,
+	.field {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		margin: 0.75rem 2px;
+		word-break: break-word;
+		.edit {
+			cursor: pointer;
+		}
+	}
+
+	.menu {
+		width: 100% !important;
+		height: 4rem !important;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		.button {
+			transition: all 0.25s ease;
+			backdrop-filter: blur(2px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			flex: 1;
+			min-height: 100%;
+		}
+		i.bx {
+			font-size: 2rem;
+		}
+	}
+
+	.url {
+		margin: 0.5rem 0;
+		position: relative;
+		border: 1px $lowerlight solid;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		.linkBubble {
+			min-width: 70%;
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.25s ease;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -110%);
+
+			display: flex;
+			pointer-events: none;
+			max-width: 100%;
+			font-size: 1rem;
+			background-color: $lowerbg;
+			backdrop-filter: blur(2px);
+			border: 1px $lowlight solid;
+			border-radius: 5px;
+			padding: 0.5rem;
+			i {
+				font-size: 1rem;
+				padding-top: 4px;
+				margin-right: 0.5rem;
+			}
+			p {
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+		}
+		.linkMenu {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.25s ease;
+			background-color: rgba(var(--vs-bg), 0.5);
+			backdrop-filter: blur(2px);
+			width: 100%;
+			height: 100%;
+			.button {
+				transition: all 0.25s ease;
+				backdrop-filter: blur(2px);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				flex: 1;
+				min-height: 100%;
+			}
+			i.bx {
+				font-size: 2rem;
+			}
+		}
+		.link {
+			margin: 0.75rem;
+			.bar {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			.descBar p {
+				color: $lowlight;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+			.titleBar {
+				margin-bottom: 0.25rem;
+				p {
+					margin: 0 0.5rem;
+					color: $text;
+					overflow: hidden;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	//Hover to see linkMenu icons
+	.url:hover > .linkMenu,
+	.url:focus-within > .linkMenu,
+	.url .linkMenu:hover,
+	.url .linkMenu:focus {
+		visibility: visible;
+		opacity: 1;
+	}
+	.url:hover {
+		border: 1px transparent solid;
+	}
+
+	//Hover to see linkBubble
+	.url:hover > .linkBubble,
+	.url:focus-within > .linkBubble,
+	.url .linkBubble:hover,
+	.url .linkBubble:focus {
+		visibility: visible;
+		opacity: 1;
+	}
+	.url:hover {
+		border: 1px transparent solid;
+	}
+}

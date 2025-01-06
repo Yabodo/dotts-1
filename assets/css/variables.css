@@ -1,0 +1,27 @@
+:root {
+  --vs-highlight: 25, 91, 255;
+  --vs-text: 17, 17, 17;
+  --vs-lowlight: 119, 119, 119;
+  --vs-lowerlight: 142, 142, 142;
+  --vs-higherbg: 219, 219, 237;
+  --vs-bg: 237, 241, 241;
+  --vs-lowerbg: 238, 238, 238;
+  --vs-lowestbg: 255, 255, 255;
+  --vs-red: 242, 19, 93;
+  --vs-blue: 91, 59, 196;
+  --vs-green: 23, 201, 100;
+}
+
+[vs-theme=dark] {
+  --vs-highlight: 0, 247, 255;
+  --vs-text: 238, 238, 238;
+  --vs-lowlight: 178, 178, 178;
+  --vs-lowerlight: 142, 142, 142;
+  --vs-higherbg: 13, 38, 59;
+  --vs-bg: 9, 26, 40;
+  --vs-lowerbg: 20, 20, 23;
+  --vs-lowestbg: 0, 0, 0;
+  --vs-red: 242, 19, 93;
+  --vs-blue: 91, 59, 196;
+  --vs-green: 23, 201, 100;
+}/*# sourceMappingURL=variables.css.map */

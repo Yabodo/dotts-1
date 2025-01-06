@@ -1,0 +1,27 @@
+.socials {
+	margin: 0.5rem 0;
+}
+
+.avatarContainer {
+	position: relative;
+	margin: 0.5rem 0;
+	.logout,
+	.settings {
+		position: absolute;
+		top: 0;
+		cursor: pointer;
+		.bx {
+			font-size: 1rem;
+		}
+	}
+	.settings {
+		left: 0;
+		right: unset;
+		transform: translate(-50%, -50%);
+	}
+	.logout {
+		right: 0;
+		left: unset;
+		transform: translate(50%, -50%);
+	}
+}

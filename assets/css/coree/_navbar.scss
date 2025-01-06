@@ -1,0 +1,159 @@
+@import '../variables.scss';
+
+.navbar {
+	position: relative;
+	max-width: 408px;
+	border-bottom: 1px solid $bg;
+	.actions {
+		height: 8vh;
+		display: flex;
+		.button, .icon {
+			color: #091a28;
+			width: 40%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			cursor: pointer;
+		}
+		.button:hover {
+			color: #fff;
+			background-color: #0d263b;
+		}
+		.icon {
+			width: 20%;
+		}
+	}
+	//z-index: 999;
+	.menu {
+		position: absolute;
+		display: block;
+		visibility: hidden;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: all 0.25s ease;
+		.navbar-items {
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.25s ease;
+		}
+		&.guest{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.navbar:hover > .menu,
+.navbar:focus-within > .menu,
+.navbar .menu:hover,
+.navbar .menu:focus {
+	visibility: visible;
+	opacity: 1;
+}
+
+.vs-input {
+	width: 100%;
+}
+.vs-avatar__group {
+	justify-content: flex-start;
+}
+
+.menu:hover > .navbar-items,
+.menu:focus-within > .navbar-items,
+.menu .navbar-items:hover,
+.menu .navbar-items:focus {
+	visibility: visible;
+	opacity: 1;
+}
+
+.comb-toggle-props {
+	left: 50%;
+	transform: translate(-50%, 0);
+	height: 11vmin;
+}
+
+.comb-container {
+	width: 25vmin;
+	position: absolute;
+	pointer-events: none;
+}
+.comb-container-1 {
+	left: 50%;
+	transform: translate(-129%, 2%);
+}
+.comb-container-2 {
+	left: 50%;
+	transform: translate(-50%, 53%);
+}
+.comb-container-3 {
+	left: 50%;
+	transform: translate(29%, 2%);
+}
+.comb {
+	fill: #091a28;
+	pointer-events: visible;
+	cursor: pointer;
+}
+.navbar-bg {
+	position: absolute;
+	transform: translate(-50%, 0%);
+	pointer-events: visible;
+	width: 52.5vmin;
+	height: 22.5vmin;
+}
+
+.comb-icon {
+	position: absolute;
+	height: 25%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	stroke: #FFF;
+}
+
+.comb-toggle-icon {
+	position: absolute;
+	height: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	stroke: #FFF;
+}
+
+// LIGHT & DARK MODE
+.dark-mode {
+	.comb {
+		fill: #0d263b;
+	}
+	.comb-icon,
+	.comb-toggle-icon {
+		stroke: #fff;
+	}
+	.navbar {
+		background-color: $bg;
+		color: #fff;
+		.actions {
+			.button {
+				color: #FFF;
+				&:hover {
+					background-color: $higherbg;
+				}
+			}
+		}
+	}
+}
+
+//Tablets and larger
+@media (min-width: 425px) {
+	.comb-toggle-props {
+		height: 7vmin;
+	}
+	.comb-container {
+		width: 16vmin;
+	}
+	.navbar-bg {
+		width: 33.6vmin;
+		height: 14.4vmin;
+	}
+}

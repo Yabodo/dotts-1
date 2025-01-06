@@ -1,0 +1,573 @@
+//-- 'variables'
+:root {
+	--vs-highlight: 25, 91, 255;
+	--vs-text: 17, 17, 17;
+	--vs-lowlight: 119, 119, 119;
+	--vs-lowerlight: 142, 142, 142;
+
+    --vs-higherbg: 219, 219, 237;
+    --vs-bg: 237, 241, 241; //Default Background
+    --vs-lowerbg: 204, 216, 219; //Background providing better contrast
+    --vs-lowestbg: 255, 255, 255; //Background providing better contrast
+
+	--vs-red: 242, 19, 93;
+	--vs-blue: 91, 59, 196;
+    --vs-green: 23, 201, 100;
+}
+
+[vs-theme='dark'] {
+	--vs-highlight: 0, 247, 255;
+	--vs-text: 238, 238, 238;
+	--vs-lowlight: 178, 178, 178;
+	--vs-lowerlight: 142, 142, 142;
+
+    --vs-higherbg: 13, 38, 59;
+    --vs-bg: 9, 26, 40; //Default Background
+    --vs-lowerbg: 20, 20, 23; //Background providing better contrast
+    --vs-lowestbg: 0, 0, 0; //Background providing better contrast
+    
+	--vs-red: 242, 19, 93;
+	--vs-blue: 91, 59, 196;
+    --vs-green: 23, 201, 100;
+}
+
+$highlight: rgba(var(--vs-highlight), 1);
+$lowlight: rgba(var(--vs-lowlight), 1);
+$lowerlight: rgba(var(--vs-lowerlight), 1);
+$higherbg: rgba(var(--vs-higherbg), 1);
+$bg: rgba(var(--vs-bg), 1);
+$lowerbg: rgba(var(--vs-lowerbg), 1);
+$lowestbg: rgba(var(--vs-lowestbg), 1);
+$text: rgba(var(--vs-text), 1);
+$textShadow: rgba(var(--vs-text), 0.2);
+
+$red: rgba(var(--vs-red), 1);
+$blue: rgba(var(--vs-blue), 1);
+$green: rgba(var(--vs-green), 1);
+
+$dangerbg: rgba(var(--vs-danger), 0.5);
+
+$black: #091a28;
+$gray0: rgb(9, 26, 40);
+$primary: rgb(91, 59, 196);
+$primaryOriginal: rgb(137, 192, 255);
+$success: rgb(23, 201, 100);
+$danger: rgb(242, 19, 93);
+$warning: rgb(255, 130, 0);
+$gray: rgb(36, 33, 69);
+$max: rgb(255, 255, 255);
+$min: rgb(36, 33, 69);
+//-- end of 'variables'
+
+body {
+	background-color: $bg;
+	color: $text;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $text;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    display: block;
+    //background: $lowerbg;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px $bg inset !important;
+    box-shadow: 0 0 0 30px $bg inset !important;
+	-webkit-text-fill-color: $text !important;
+}
+
+.nuxt-wrapper {
+    padding-top: 10vmin;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+p {
+    &#warnLighted {
+        color: $warning;
+    }
+}
+
+.vs-avatar-content {
+    z-index: 0 !important;
+}
+
+.vs-button {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+//Gives boxicons their moving motion on hover.
+.anim-icon {
+    position: relative;
+    i {
+        position: absolute;
+    }
+    .bx-tada {
+        opacity: 0;
+    }
+    &:hover {
+        i {
+            opacity: 0;
+        }
+        .bx-tada {
+            opacity: 1;
+        }
+    }
+}
+
+.svg-fill {
+	fill: rgba(var(--vs-text), 1);
+}
+
+//Used for class based styling (like TailwindCSS), can be used for fast prototyping, but avoid in production by //commenting it 
+
+//-- 'inlines'
+.not-margin {
+	margin: 0px;
+	font-weight: normal;
+	padding: 10px;
+}
+
+.mb {
+	margin-bottom: 1rem;
+}
+
+.my {
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+//-- end of 'inlines'
+
+i.bx.bx-pin, i.bx.bxs-pin, i.bx.bxs-user-x {
+    color: $red;
+}
+
+i.bx.bx-user-check, i.bx.bx-user-plus, i.bx.bxs-user-plus {
+    color: $green;
+}
+
+i.bx.bx-navigation, i.bx.bxs-navigation {
+    color: $blue;
+}
+
+i.bx.bx-folder-open, i.bx.bxs-folder-open {
+    color: $lowlight;
+}
+
+i.bx.bx-edit, i.bx.bxs-edit {
+    color: $lowlight;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.prompt {
+	.header {
+		margin: 0.5rem 0;
+	}
+	.body {
+		margin: 1rem 0;
+	}
+    .section {
+        .header {
+            margin: 1rem 0;
+        }
+		margin: 2rem 0;
+	}
+	.footer {
+		margin: 0.5rem 0;
+		justify-content: space-between;
+	}
+	.button {
+		margin: 1rem 0;
+	}
+	.field {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.container {
+    max-width: 407px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//hCaptcha iFrame manipulation
+/* body.no-selection {
+    background-color: $bg;
+} */
+
+//Used by the organisms/post.vue component
+@import 'components/post';
+
+//-- 'core/navbar'
+
+.navbar {
+	position: relative;
+	max-width: 408px;
+	border-bottom: 1px solid $higherbg;
+	background-color: $bg;
+	.actions {
+		height: 8vh;
+		display: flex;
+		.button, .icon {
+			color: $text;
+			width: 40%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			cursor: pointer;
+		}
+		.button:hover {
+			color: $text;
+			background-color: $higherbg;
+		}
+		.icon {
+			width: 20%;
+		}
+	}
+	//z-index: 999;
+	.menu {
+		position: absolute;
+		display: block;
+		visibility: hidden;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: all 0.25s ease;
+		.navbar-items {
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.25s ease;
+		}
+		&.guest{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.navbar:hover > .menu,
+.navbar:focus-within > .menu,
+.navbar .menu:hover,
+.navbar .menu:focus {
+	visibility: visible;
+	opacity: 1;
+}
+
+.vs-input {
+	width: 100%;
+}
+.vs-avatar__group {
+	justify-content: flex-start;
+}
+
+.menu:hover > .navbar-items,
+.menu:focus-within > .navbar-items,
+.menu .navbar-items:hover,
+.menu .navbar-items:focus {
+	visibility: visible;
+	opacity: 1;
+}
+
+.comb-toggle-props {
+	left: 50%;
+	transform: translate(-50%, 0);
+	height: 11vmin;
+}
+
+.comb-container {
+	width: 25vmin;
+	position: absolute;
+	pointer-events: none;
+}
+.comb-container-1 {
+	left: 50%;
+	transform: translate(-129%, 2%);
+}
+.comb-container-2 {
+	left: 50%;
+	transform: translate(-50%, 53%);
+}
+.comb-container-3 {
+	left: 50%;
+	transform: translate(29%, 2%);
+}
+.comb {
+	fill: $higherbg;
+	pointer-events: visible;
+	cursor: pointer;
+	&:hover {
+		fill: $lowestbg;
+	}
+}
+.navbar-bg {
+	position: absolute;
+	transform: translate(-50%, 0%);
+	pointer-events: visible;
+	width: 52.5vmin;
+	height: 22.5vmin;
+}
+
+.comb-icon {
+	position: absolute;
+	height: 25%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	stroke: $text;
+}
+
+.comb-toggle-icon {
+	position: absolute;
+	height: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	stroke: $text;
+}
+
+// LIGHT & DARK MODE
+.dark-mode {
+	.comb {
+		fill: $higherbg;
+		&:hover {
+			fill: $lowestbg;
+		}
+	}
+	.comb-icon,
+	.comb-toggle-icon {
+		stroke: $text;
+	}
+	.navbar {
+		background-color: $bg;
+		color: $text;
+		.actions {
+			.button {
+				color: $text;
+				&:hover {
+					background-color: $higherbg;
+				}
+			}
+		}
+	}
+}
+
+//Tablets and larger
+@media (min-width: 425px) {
+	.comb-toggle-props {
+		height: 7vmin;
+	}
+	.comb-container {
+		width: 16vmin;
+	}
+	.navbar-bg {
+		width: 33.6vmin;
+		height: 14.4vmin;
+	}
+}
+
+
+//-- end of 'core/navbar'
+
+.tinyButton {
+	font-size: 0.7em; 
+	background-color: $lowestbg; 
+	color: $text; 
+	border-radius: 2px; 
+	padding: 1px 4px 2px 2px; 
+	cursor: pointer;
+}
+
+.icon-button {
+    transition: all 0.25s ease;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+    min-height: 100%;
+    font-size: 2rem;
+    .icon-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.component {
+	&.profile {
+		//border-bottom: 1px solid gray;
+		display: flex;
+		.info .names {
+			display: flex;
+		}
+		h4 {
+			font-weight: 500;
+			margin-left: 0.5rem;
+		}
+		p {
+			color: $lowlight;
+			margin-left: 0.5rem;
+		}
+	}
+	&.userSearch {
+		position: relative;
+		margin-bottom: 1rem;
+		.results {
+            opacity: 0;
+            visibility: hidden;
+			z-index: 9;
+			position: absolute;
+			background-color: $lowerbg;
+			width: 100%;
+			padding: 0 1rem;
+            margin: 0.5rem 0;
+			border-radius: 1rem;
+            -webkit-box-shadow: 0px 8px 19px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 8px 19px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 8px 19px 0px rgba(0,0,0,0.75);
+		}
+		.result {
+			margin: 1rem 0;
+		}
+        &:hover > .results,
+        &:focus-within > .results,
+        &:active > .results
+        .results:hover,
+        .results:focus,
+        .result:active {
+            visibility: visible;
+            opacity: 1;
+        }
+	}
+}
+
+.list{
+    margin: 2rem 0;
+    .header {
+        display: flex;
+        margin: 0rem 1rem; 
+        align-items: center; 
+        justify-content: space-between;
+        h3 {
+            margin: 0.75rem 0; 
+            font-weight: 100;
+        }
+        .button {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: $text;
+        }
+    }
+	.bubbleButton {
+		display: flex;
+        align-items: center;
+		background-color: $lowerbg;
+		border-radius: 0.5rem;
+		border-color: $text;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+		margin: 0.25rem 0;
+		color: $text;
+        .icon {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+        }
+	}
+}
+.checklist {
+    display: flex; justify-content: space-between; align-items: center;
+    .vs-checkbox-label {
+        font-size: 1rem;
+    }
+    .secondary {
+        color: #666;
+    }
+}
+
+.introduction .paragraph {
+    margin: 1rem 0;
+    .highlighted {
+        color: $highlight;
+    }
+}
+
+.search {
+    .results {
+        margin-bottom: 2rem;
+        .result {
+            margin: 0.5rem 0;
+        }
+    }
+}
+
+.youtube-video {
+	width: 100%; 
+	min-height: 15rem;
+}
+
+.register, .login, .recoverPassword {
+    height: 90vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+    h3 {
+        font-weight: 100; 
+        margin-bottom: 2rem 0;
+    }
+    .form {
+        margin: 1.75rem 0;
+        .field {
+            margin: 1.5rem 0;
+        }
+        .checkboxes {
+            margin: -0.75rem 0;
+            .checkbox {
+                display:flex; 
+                align-items: center; 
+                #hCaptcha {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    .button {
+        margin: 1rem 0;
+    }
+}
+
+.login {
+    padding-bottom: 10vh;
+}
+
+.tos {
+    .paragraph {
+        margin: 1rem 0;
+    }
+}

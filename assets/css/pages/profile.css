@@ -1,0 +1,28 @@
+.socials {
+  margin: 0.5rem 0;
+}
+
+.avatarContainer {
+  position: relative;
+  margin: 0.5rem 0;
+}
+.avatarContainer .logout,
+.avatarContainer .settings {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+}
+.avatarContainer .logout .bx,
+.avatarContainer .settings .bx {
+  font-size: 1rem;
+}
+.avatarContainer .settings {
+  left: 0;
+  right: unset;
+  transform: translate(-50%, -50%);
+}
+.avatarContainer .logout {
+  right: 0;
+  left: unset;
+  transform: translate(50%, -50%);
+}/*# sourceMappingURL=profile.css.map */

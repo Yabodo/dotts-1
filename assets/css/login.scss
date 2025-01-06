@@ -1,0 +1,41 @@
+.con-form {
+	width: 100%;
+	.flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		a {
+			font-size: 0.8rem;
+		}
+	}
+	.vs-checkbox-label {
+		font-size: 0.8rem;
+	}
+	.vs-input-content {
+		margin: 10px 0px;
+		width: calc(100%);
+		.vs-input {
+			width: 100%;
+		}
+	}
+}
+.footer-dialog {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: calc(100%);
+	.new {
+		margin: 0px;
+		margin-top: 20px;
+		padding: 0px;
+		font-size: 0.7rem;
+		a {
+			margin-left: 6px;
+			text-decoration: underline;
+		}
+	}
+	.vs-button {
+		margin: 0px;
+	}
+}

@@ -1,0 +1,42 @@
+.con-form {
+  width: 100%;
+}
+.con-form .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.con-form .flex a {
+  font-size: 0.8rem;
+}
+.con-form .vs-checkbox-label {
+  font-size: 0.8rem;
+}
+.con-form .vs-input-content {
+  margin: 10px 0px;
+  width: 100%;
+}
+.con-form .vs-input-content .vs-input {
+  width: 100%;
+}
+
+.footer-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.footer-dialog .new {
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  font-size: 0.7rem;
+}
+.footer-dialog .new a {
+  margin-left: 6px;
+  text-decoration: underline;
+}
+.footer-dialog .vs-button {
+  margin: 0px;
+}/*# sourceMappingURL=login.css.map */
